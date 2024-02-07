@@ -169,7 +169,7 @@ async function updateStatuses() {
             aria-hidden="true"></span>${website.online ? "Online" : "Offline"}
         </button>
             <p class="pb-3 mb-0 small lh-sm border-bottom">
-                <strong class="d-block text-gray-dark">Mojang Auth Server Status</strong>
+                <strong class="d-block text-gray-dark">Website - Home Page</strong>
                 ${website.responsetime ? "Response Time: " + website.responsetime + "ms" : "Status: " + website.text} 
             </p>
         </div>
@@ -182,7 +182,7 @@ async function updateStatuses() {
             aria-hidden="true"></span>${website.online ? "Online" : "Offline"}
         </button>
             <p class="pb-3 mb-0 small lh-sm border-bottom">
-                <strong class="d-block text-gray-dark">Mojang Auth Server Status</strong>
+                <strong class="d-block text-gray-dark">Website - Home Page</strong>
                 ${website.responsetime ? "Response Time: " + website.responsetime + "ms" : "Status: " + website.text} 
             </p>
         </div>
