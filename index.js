@@ -28,7 +28,7 @@ async function updateStatuses() {
     document.querySelector("#serverInfo").innerHTML = `<div class="d-flex text-body-secondary pt-3">
     <div class="pb-3 mb-0 small lh-sm w-100">
             <p class="pb-3 mb-0 small lh-sm border-bottom">
-                <span style="display: inline-block;"><strong class="text-gray-dark">MOTD: </strong><span class="motd">${bedrock.additionalInfo?.motd ?? "Unavailable"}</span> </span>
+                <span style="display: inline-block;"><strong class="text-gray-dark">MOTD: </strong><span class="motd">${java.additionalInfo?.motd ?? "Unavailable"}</span> </span>
                 <strong class="d-block text-gray-dark">Players Online: ${map.additionalInfo?.players?.length ?? "Unavailable"} </strong>
                 <strong class="d-block text-gray-dark">Version: ${bedrock.additionalInfo?.version ?? "Unavailable"}  </strong>
                 <strong class="d-block text-gray-dark">Estimated Queue Time Status: ${getQueueTimeIsh(map.additionalInfo?.players?.length)}  </strong>
@@ -213,3 +213,9 @@ setInterval(() => {
     if(secs == 30) updateStatuses()
     document.querySelector("#secondsToRefresh").innerText = "Refreshing in " + secs + " seconds...";
 }, 1000)
+
+navigator.serviceWorker.addEventListener("message", (e) => {
+    if(e.data.type == "Sort notification request thing.") {
+        console.log("Doing so now...")
+    }
+})

@@ -2,6 +2,10 @@
 <html lang="en" data-bs-theme="auto">
 
 <head>
+  <script>
+    navigator.serviceWorker.register("/service-worker.js")
+    console.log(navigator.serviceWorker)
+  </script> 
   <script src="../assets/js/color-modes.js"></script>
 
   <meta charset="utf-8">
@@ -97,7 +101,8 @@
 
 
   <!-- Custom styles for this template -->
-  <link href="offcanvas-navbar.css" rel="stylesheet">
+<link rel="manifest" href="manifest.json" />
+<link href="offcanvas-navbar.css" rel="stylesheet">
 </head>
 
 <body class="bg-body-tertiary">
@@ -152,19 +157,16 @@
       <img class="me-3" src="./thumbsUp.png" alt="" width="38" height="38">
       <div class="lh-1">
         <h1 class="h6 mb-0 text-white lh-1">Service Status</h1>
-        <small>Currently keeping track of <span id="totalKeepingTrackOf">5</span> services! - <span id="secondsToRefresh">Refreshing in 30 seconds...</span></small>
+        <small>Currently keeping track of <span id="totalKeepingTrackOf">5</span> services! - <span style="color: white;" id="secondsToRefresh">Refreshing in 30 seconds...</span></small>
       </div>
     </div>
 
     <div class="d-flex align-items-center alert alert-warning" role="alert">
       <img class="me-3" src="./warning.svg" alt="" width="38" height="38">
       <div style="width: 100%;">
-        <span style="width: 100%;"><strong>Bedrock Users unable to play on update.</strong> <small
+        <span style="width: 100%;"><strong>Bedrock Status showing offline.</strong> <small
             style="float: right;">Issue Ongoing</small></span>
-        <p class="lh-sm">Bedrock players may experience an error such as "Outdated Geyser Server".<br> This cannot be
-          resolved by the
-          PVC server, so please wait until the server updates (often the morning after) and <a href="https://discord.com/channels/586571669145911316/589416108390350849/983807298826797136">disable your device's
-            auto-updates!</a></p>
+        <p class="lh-sm">We are currently waiting an update to the bedrock protocol documentation, to be able to work on a fix to this issue. Please rely on the Java status only. Apologies!</a></p>
       </div>
     </div>
 
